@@ -28,7 +28,7 @@ const OpenMenuItem: FC<MenuItemProps> = ({ items }) => {
 			document.removeEventListener("touchstart", handler);
 			document.removeEventListener('keydown', keyHandler)
 		};
-	}, [dropdown]);
+	}, [dropdown, setModalDisplay]);
 
 	return (
 		<li className="menu-items" ref={ref}>

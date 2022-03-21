@@ -18,7 +18,7 @@ const Modal = () => {
 				[name]: value ? value.trim() : ''
 			}
 		})
-	}, [modalForm])
+	}, [])
 
 	return (
 		<div className='modal'>
