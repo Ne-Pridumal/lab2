@@ -39,7 +39,9 @@ const MenuItems: FC<MenuItemsProps> = ({ items, depthLevel }) => {
 			) : (
 				items.title !== 'close' ?
 					items.title !== 'open' ?
-						<a href="/#" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>{items.title} <img style={{ maxWidth: 25, maxHeight: 35 }} src={items.image} /></a>
+						<a href="/#" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>{items.title}
+							{items.image ? <img style={{ maxWidth: 25, maxHeight: 35 }} src={items.image} alt='#' /> : null}
+						</a>
 						:
 						<OpenMenuItem items={items.title} />
 					:
